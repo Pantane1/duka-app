@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duka – Shop</title>
+  <meta name="description" content="Duka – your local online shop. Pay with M-Pesa.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#" onclick="showPage('products');return false;"><em>Du</em>ka</a>
+      <div class="nav-links">
+        <button class="nav-link active" data-page="products">Shop</button>
+        <button class="nav-link" data-page="cart">
+          <span class="cart-badge">Cart <span class="badge" id="cart-count">0</span></span>
+        </button>
+        <button class="nav-link" data-page="checkout">Checkout</button>
+        <button class="nav-link" data-page="orders">Orders</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Products Page ───────────────────────────────────────────────── -->
+  <div id="page-products" class="page active">
+    <div class="container">
+      <div class="page-header">
+        <h1>Fresh <em>goods</em>,<br>great prices.</h1>
+        <p>Select your items, add to cart, pay with M-Pesa.</p>
+      </div>
+      <div class="products-grid" id="products-grid">
+        <!-- JS renders here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Cart Page ───────────────────────────────────────────────────── -->
+  <div id="page-cart" class="page">
+    <div class="container cart-layout">
+      <div class="page-header">
+        <h1>Your <em>Cart</em></h1>
+        <p>Review items before checking out.</p>
+      </div>
+      <div id="cart-content"><!-- JS renders here --></div>
+    </div>
+  </div>
+
+  <!-- ── Checkout Page ───────────────────────────────────────────────── -->
+  <div id="page-checkout" class="page">
+    <div class="container">
+      <div class="page-header">
+        <h1>Check<em>out</em></h1>
+        <p>Complete your order with M-Pesa STK Push.</p>
+      </div>
+      <div class="checkout-layout">
+        <div class="checkout-card">
+          <h2>Order Summary</h2>
+          <div id="checkout-summary"><!-- JS renders here --></div>
+        </div>
+        <div class="checkout-card">
+          <h2>Payment Details</h2>
+          <div class="form-group">
+            <label for="phone-input">M-Pesa Phone Number</label>
+            <input type="tel" id="phone-input"
+              placeholder="e.g. 0712 345 678"
+              autocomplete="tel" inputmode="numeric" maxlength="13">
+            <p class="form-hint">You'll receive an STK push on this number.</p>
+          </div>
+          <button class="btn-pay" id="btn-pay">📱 Pay with M-Pesa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Orders Page ─────────────────────────────────────────────────── -->
+  <div id="page-orders" class="page">
+    <div class="container">
+      <div class="page-header">
+        <h1>Order <em>History</em></h1>
+        <p>Recent orders and their payment status.</p>
+      </div>
+      <div id="orders-content"><!-- JS renders here --></div>
+    </div>
+  </div>
+
+  <!-- ── Payment Status Modal ────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-icon"  id="modal-icon">📱</div>
+      <div class="modal-title" id="modal-title">Check your phone</div>
+      <div class="modal-body"  id="modal-body"></div>
+      <div class="modal-ref"   id="modal-ref"></div>
+      <div class="polling-status" id="polling-status"></div>
+      <div id="modal-actions"></div>
+    </div>
+  </div>
+
+  <!-- ── Order Detail Drawer ──────────────────────────────────────────── -->
+  <div class="drawer-overlay" id="drawer-overlay">
+    <div class="drawer" id="order-drawer">
+      <div class="drawer-header">
+        <div class="drawer-title" id="drawer-title">Order Detail</div>
+        <button class="drawer-close" id="btn-drawer-close">✕</button>
+      </div>
+      <div class="drawer-body" id="drawer-body"><!-- JS renders here --></div>
+    </div>
+  </div>
+
+  <!-- ── Toasts ───────────────────────────────────────────────────────── -->
+  <div class="toasts" id="toasts"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
