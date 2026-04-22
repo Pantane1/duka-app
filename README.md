@@ -1,6 +1,7 @@
 # Duka App 🛍️
 
 > A production-ready Node.js + MySQL + Vanilla JS shop with M-Pesa (Lipana) payments.
+**author_pantane**
 
 ---
 
