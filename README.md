@@ -222,3 +222,11 @@ Frontend polls GET /api/payment/status/:id every 5s
 | Discount codes   | Add `discounts` table, validate in checkout |
 | Admin panel      | Add `/admin` Express router           |
 | Email receipt    | Hook into `onPaymentSuccess` in payment.js |
+
+<p align="center">
+  <a href="#"><img src="https://github.com/Pantane1/nf/blob/main/public/ph.png" alt="ph-logo">
+</p>
+
+<p align="center">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=ACAF50&center=true&vCenter=true&multiline=false&lines=Built+Different" alt="pantane">
+</p>
